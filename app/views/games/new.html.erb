@@ -1,0 +1,19 @@
+<h1>Games#new</h1>
+<br><br>
+<h1>Your Letters:</h1>
+<h2><%= @grid %></h2>
+<br><br>
+
+<form action="/score">
+  Type the longest word you know:<br>
+    <input type="text" name="word">
+  <br><br>
+  <input type="submit" value="Submit">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    
+  <input type="hidden" name="grid" value="<%= @grid_str%>"></textarea>
+  <input type="hidden" name="stime" value="<%= @start_time%>"></textarea>
+</form> 
+<br><br><br><br>
+<p>Find me in app/views/games/new.html.erb</p>
+
